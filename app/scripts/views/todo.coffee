@@ -7,8 +7,17 @@ class todito.Views.Todo extends Backbone.View
   events:
     'change input': 'toggleCompleted'
 
+  initialize: () ->
+    @.toggleClass()
+    @model.on 'change:completed', @.toggleClass
+
   toggleCompleted: () ->
-    console.log @tagName
+    @model.set 'completed', !@model.get('completed')
+    @model.save()
+
+  toggleClass: () =>
+    @$el.toggleClass 'completed', @model.get('completed')
+
     
   render: () ->
     @$el.html(@template(@model.attributes))

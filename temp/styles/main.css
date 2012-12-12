@@ -63,7 +63,11 @@ body {
   float: left;
   margin-right: 10px;
 }
-/* line 55, ../../app/styles/main.scss */
+/* line 56, ../../app/styles/main.scss */
+#todos li.completed label {
+  text-decoration: line-through;
+}
+/* line 60, ../../app/styles/main.scss */
 #todos li:nth-child(odd) {
   background: #f4f7fa;
 }

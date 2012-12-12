@@ -52,6 +52,11 @@ body {
       float:left;
       margin-right: 10px;
     }
+    
+    &.completed label {
+      text-decoration: line-through;
+    }
+
     &:nth-child(odd) {
       background: $odd-background;
     }
