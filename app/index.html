@@ -16,34 +16,20 @@
     <div class="container">
       <div class="row">
         <div class="span6 offset3">
-          <div id="todos">
+          <div id="todito">
             <h3>Todos</h3>
             <hr>
-            <form class="form-inline">
-              <input type="text" class="input-xlarge">
+            <form id="new-todo" class="form-inline">
+              <input type="text" class="input-xlarge" autofocus>
               <button type="submit" class="btn">Add todo</button>
             </form>
 
-            <ul id="todo-list">
-              <li class="odd">
-                <input type="checkbox">
-                <label>This is stuff, I gotta do …</label>
-              </li>
-              <li class="even">
-                <input type="checkbox">
-                <label>This is stuff, I gotta do …</label>
-              </li>
-              <li class="odd">
-                <input type="checkbox">
-                <label>This is stuff, I gotta do …</label>
-              </li>
-
-            </ul>
+            <ul id="todos"></ul>
 
             <hr>
             <p class="status">
               <span class="remaining">2 items left</span>
-              <span class="pull-right"><a href="#">Mark all as complete</a></span>
+              <span class="pull-right"><a href="#" class="markAllAsRead">Mark all as complete</a></span>
             </p>
           </div>
         </div>
@@ -54,18 +40,25 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
+    <script id="todo-template" type="text/x-handlebars-template">
+      <input type="checkbox" {{#if completed}}checked{{/if}}>
+      <label>{{title}}</label>
+    </script>
 
     <!-- build:js scripts/scripts.js -->
     <script src="scripts/vendor/jquery.min.js"></script>
     <script src="scripts/vendor/lodash.min.js"></script>
     <script src="scripts/vendor/backbone-min.js"></script>
     <script src="components/backbone.localStorage/backbone.localStorage.js"></script>
+    <script src="components/handlebars/handlebars-1.0.0-rc.1.js"></script>
 
     <script src="scripts/main.js"></script>
-    <script src="scripts/views/application-view.js"></script>
-    <script src="scripts/models/application-model.js"></script>
-    <script src="scripts/collections/application-collection.js"></script>
-    <script src="scripts/routes/application-router.js"></script>
+    <script src="scripts/models/todo.js"></script>
+    <script src="scripts/collections/todos.js"></script>
+    <script src="scripts/views/new_todo.js"></script>
+    <script src="scripts/views/todo.js"></script>
+    <script src="scripts/views/todos.js"></script>
+    <script src="scripts/views/app.js"></script>
     <!-- endbuild -->
 
   </body>

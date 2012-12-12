@@ -8,7 +8,7 @@ body {
 }
 
 /* line 12, ../../app/styles/main.scss */
-#todos {
+#todito {
   margin-top: 100px;
   border: 1px solid #e4e4e4;
   background: white;
@@ -19,51 +19,51 @@ body {
   border-radius: 5px;
 }
 /* line 21, ../../app/styles/main.scss */
-#todos h3 {
+#todito h3 {
   text-align: center;
   padding: 15px;
 }
 /* line 26, ../../app/styles/main.scss */
-#todos hr {
+#todito hr {
   border-style: dashed;
 }
 /* line 30, ../../app/styles/main.scss */
-#todos form {
+#todito form {
   padding: 0 15px;
 }
 /* line 33, ../../app/styles/main.scss */
-#todos .status {
+#todito .status {
   padding: 15px;
   padding-top: 0;
 }
 /* line 36, ../../app/styles/main.scss */
-#todos .status .remaining {
+#todito .status .remaining {
   color: #999999;
 }
 
 /* line 43, ../../app/styles/main.scss */
-#todo-list {
+#todos {
   list-style: none;
   margin: 0;
 }
 /* line 11, ../../../../../.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/compass-0.13.alpha.0/frameworks/compass/stylesheets/compass/typography/lists/_bullets.scss */
-#todo-list li {
+#todos li {
   list-style-image: none;
   list-style-type: none;
   margin-left: 0;
 }
 /* line 48, ../../app/styles/main.scss */
-#todo-list li {
+#todos li {
   overflow: hidden;
   *zoom: 1;
   padding: 15px;
 }
 /* line 51, ../../app/styles/main.scss */
-#todo-list li input, #todo-list li label {
+#todos li input, #todos li label {
   float: left;
   margin-right: 10px;
 }
 /* line 55, ../../app/styles/main.scss */
-#todo-list li.odd {
+#todos li.odd {
   background: #f4f7fa;
 }
