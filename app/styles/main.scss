@@ -1,9 +1,11 @@
 /* Will be compiled down to a single stylesheet with your sass files */
 @import '../components/bootstrap-sass/bootstrap-2.2.2.css';
 @import 'compass';
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
 
 body {
 
+  font-family: 'Open Sans', sans-serif;
   background: #f6f5f5;
 }
 
@@ -18,13 +20,19 @@ body {
 
   h3 {
     text-align: center;
+    padding: 15px;
+  }
+
+  hr {
+    border-style: dashed;
   }
 
   form {
-    padding: 15px;
+    padding: 0 15px; 
   }
   .status {
     padding: 15px;
+    padding-top: 0;
     .remaining {
       color: $footer-color;
 
@@ -39,7 +47,7 @@ body {
 
   li {
     @include clearfix;
-    padding: 10px;
+    padding: 15px;
     input, label {
       float:left;
       margin-right: 10px;

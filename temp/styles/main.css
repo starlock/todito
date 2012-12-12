@@ -1,11 +1,13 @@
 @import url(../components/bootstrap-sass/bootstrap-2.2.2.css);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
 /* Will be compiled down to a single stylesheet with your sass files */
-/* line 5, ../../app/styles/main.scss */
+/* line 6, ../../app/styles/main.scss */
 body {
+  font-family: 'Open Sans', sans-serif;
   background: #f6f5f5;
 }
 
-/* line 10, ../../app/styles/main.scss */
+/* line 12, ../../app/styles/main.scss */
 #todos {
   margin-top: 100px;
   border: 1px solid #e4e4e4;
@@ -16,24 +18,30 @@ body {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 19, ../../app/styles/main.scss */
+/* line 21, ../../app/styles/main.scss */
 #todos h3 {
   text-align: center;
-}
-/* line 23, ../../app/styles/main.scss */
-#todos form {
   padding: 15px;
 }
 /* line 26, ../../app/styles/main.scss */
+#todos hr {
+  border-style: dashed;
+}
+/* line 30, ../../app/styles/main.scss */
+#todos form {
+  padding: 0 15px;
+}
+/* line 33, ../../app/styles/main.scss */
 #todos .status {
   padding: 15px;
+  padding-top: 0;
 }
-/* line 28, ../../app/styles/main.scss */
+/* line 36, ../../app/styles/main.scss */
 #todos .status .remaining {
   color: #999999;
 }
 
-/* line 35, ../../app/styles/main.scss */
+/* line 43, ../../app/styles/main.scss */
 #todo-list {
   list-style: none;
   margin: 0;
@@ -44,18 +52,18 @@ body {
   list-style-type: none;
   margin-left: 0;
 }
-/* line 40, ../../app/styles/main.scss */
+/* line 48, ../../app/styles/main.scss */
 #todo-list li {
   overflow: hidden;
   *zoom: 1;
-  padding: 10px;
+  padding: 15px;
 }
-/* line 43, ../../app/styles/main.scss */
+/* line 51, ../../app/styles/main.scss */
 #todo-list li input, #todo-list li label {
   float: left;
   margin-right: 10px;
 }
-/* line 47, ../../app/styles/main.scss */
+/* line 55, ../../app/styles/main.scss */
 #todo-list li.odd {
   background: #f4f7fa;
 }
