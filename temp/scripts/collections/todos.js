@@ -14,6 +14,11 @@
 
     Todos.prototype.localStorage = new Store("todito-todos");
 
+    Todos.prototype.initialize = function() {
+      this.fetch();
+      return console.log(this.length + " models in the collection");
+    };
+
     return Todos;
 
   })(Backbone.Collection);

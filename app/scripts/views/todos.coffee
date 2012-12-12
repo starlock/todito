@@ -2,8 +2,9 @@ class todito.Views.Todos extends Backbone.View
   el: '#todos'
 
   initialize: () ->
+    @.addTodo(todo) for todo in todito.todos.models
+
     todito.todos.on 'add', (todo) =>
-      console.log 'adding'
       @.addTodo todo
 
   addTodo: (todo) ->

@@ -13,9 +13,14 @@
     Todos.prototype.el = '#todos';
 
     Todos.prototype.initialize = function() {
-      var _this = this;
+      var todo, _i, _len, _ref,
+        _this = this;
+      _ref = todito.todos.models;
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        todo = _ref[_i];
+        this.addTodo(todo);
+      }
       return todito.todos.on('add', function(todo) {
-        console.log('adding');
         return _this.addTodo(todo);
       });
     };

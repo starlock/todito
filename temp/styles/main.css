@@ -64,6 +64,6 @@ body {
   margin-right: 10px;
 }
 /* line 55, ../../app/styles/main.scss */
-#todos li.odd {
+#todos li:nth-child(odd) {
   background: #f4f7fa;
 }

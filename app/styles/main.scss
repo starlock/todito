@@ -52,7 +52,7 @@ body {
       float:left;
       margin-right: 10px;
     }
-    &.odd {
+    &:nth-child(odd) {
       background: $odd-background;
     }
   }
