@@ -1,0 +1,51 @@
+/* Will be compiled down to a single stylesheet with your sass files */
+@import '../components/bootstrap-sass/lib/bootstrap';
+@import 'compass';
+
+body {
+
+  background: #f6f5f5;
+}
+
+#todos {
+  $border-color: #e4e4e4;
+  $footer-color: #999;
+
+  margin-top: 100px;
+  border: 1px solid $border-color;
+  background: white;
+  @include border-radius();
+
+  h3 {
+    text-align: center;
+  }
+
+  form {
+    padding: 15px;
+  }
+  .status {
+    padding: 15px;
+    .remaining {
+      color: $footer-color;
+
+    }
+  }
+}
+
+#todo-list {
+  $odd-background: #f4f7fa;
+  @include no-bullets;
+  margin: 0;
+
+  li {
+    @include clearfix;
+    padding: 10px;
+    input, label {
+      float:left;
+      margin-right: 10px;
+    }
+    &.odd {
+      background: $odd-background;
+    }
+  }
+}
