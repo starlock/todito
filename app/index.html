@@ -27,8 +27,7 @@
             <ul id="todos"></ul>
 
             <hr>
-            <p class="status">
-              <span class="remaining">2 items left</span>
+            <p id="status">
               <span class="pull-right"><a href="#" class="markAllAsRead">Mark all as complete</a></span>
             </p>
           </div>
@@ -41,8 +40,14 @@
 
     <!-- Add your site or application content here -->
     <script id="todo-template" type="text/x-handlebars-template">
-      <input type="checkbox" {{#if completed}}checked{{/if}}>
-      <label>{{title}}</label>
+      <label>
+        <input type="checkbox" {{#if completed}}checked{{/if}}>
+        {{title}}
+      </label>
+    </script>
+
+    <script id="info-template" type="text/x-handlebars-template">
+      {{length}} items remaining
     </script>
 
     <!-- build:js scripts/scripts.js -->
@@ -58,6 +63,7 @@
     <script src="scripts/views/new_todo.js"></script>
     <script src="scripts/views/todo.js"></script>
     <script src="scripts/views/todos.js"></script>
+    <script src="scripts/views/info.js"></script>
     <script src="scripts/views/app.js"></script>
     <!-- endbuild -->
 

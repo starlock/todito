@@ -6,8 +6,8 @@ window.todito = {
   Routers: {},
   init: function() {
     console.log('Hello from Backbone!');
-    new todito.Views.App();
     todito.todos = new todito.Collections.Todos();
+    new todito.Views.App();
     new todito.Views.Todos();
     
   }

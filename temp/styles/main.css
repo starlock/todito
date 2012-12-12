@@ -32,12 +32,12 @@ body {
   padding: 0 15px;
 }
 /* line 33, ../../app/styles/main.scss */
-#todito .status {
+#todito #status {
   padding: 15px;
   padding-top: 0;
 }
 /* line 36, ../../app/styles/main.scss */
-#todito .status .remaining {
+#todito #status .remaining {
   color: #999999;
 }
 

@@ -13,10 +13,11 @@
     NewTodo.prototype.el = '#new-todo';
 
     NewTodo.prototype.events = {
-      'click button': 'addTodo'
+      'submit': 'addTodo'
     };
 
-    NewTodo.prototype.addTodo = function() {
+    NewTodo.prototype.addTodo = function(event) {
+      event.preventDefault();
       todito.todos.create({
         title: this.$('input').val()
       });

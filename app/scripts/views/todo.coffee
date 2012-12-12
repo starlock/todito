@@ -8,15 +8,16 @@ class todito.Views.Todo extends Backbone.View
     'change input': 'toggleCompleted'
 
   initialize: () ->
-    @.toggleClass()
-    @model.on 'change:completed', @.toggleClass
+    @.toggleState()
+    @model.on 'change:completed', @.toggleState
 
   toggleCompleted: () ->
     @model.set 'completed', !@model.get('completed')
     @model.save()
 
-  toggleClass: () =>
+  toggleState: () =>
     @$el.toggleClass 'completed', @model.get('completed')
+    @$('input').attr 'checked', @model.get 'completed'
 
     
   render: () ->

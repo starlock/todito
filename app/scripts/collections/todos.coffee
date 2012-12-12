@@ -1,8 +1,14 @@
 class todito.Collections.Todos extends Backbone.Collection
- model: todito.Models.Todo
+  model: todito.Models.Todo
 
- localStorage: new Store "todito-todos"
+  localStorage: new Store "todito-todos"
 
- initialize: () ->
-   @.fetch()
-   console.log @length + " models in the collection"
+  initialize: () ->
+    @.fetch()
+    console.log @length + " models in the collection"
+
+  getRemainingCount: () ->
+    { length: @.where({completed: false}).length }
+
+
+

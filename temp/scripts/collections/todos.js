@@ -19,6 +19,14 @@
       return console.log(this.length + " models in the collection");
     };
 
+    Todos.prototype.getRemainingCount = function() {
+      return {
+        length: this.where({
+          completed: false
+        }).length
+      };
+    };
+
     return Todos;
 
   })(Backbone.Collection);

@@ -3,9 +3,11 @@ class todito.Views.NewTodo extends Backbone.View
   el: '#new-todo'
 
   events:
-    'click button': 'addTodo'
+    'submit': 'addTodo'
 
-  addTodo: () ->
+  addTodo: (event) ->
+    event.preventDefault()
+
     todito.todos.create
       title: @$('input').val()
 

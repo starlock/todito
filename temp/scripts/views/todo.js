@@ -8,7 +8,7 @@
     __extends(Todo, _super);
 
     function Todo() {
-      this.toggleClass = __bind(this.toggleClass, this);
+      this.toggleState = __bind(this.toggleState, this);
       return Todo.__super__.constructor.apply(this, arguments);
     }
 
@@ -21,8 +21,8 @@
     };
 
     Todo.prototype.initialize = function() {
-      this.toggleClass();
-      return this.model.on('change:completed', this.toggleClass);
+      this.toggleState();
+      return this.model.on('change:completed', this.toggleState);
     };
 
     Todo.prototype.toggleCompleted = function() {
@@ -30,8 +30,9 @@
       return this.model.save();
     };
 
-    Todo.prototype.toggleClass = function() {
-      return this.$el.toggleClass('completed', this.model.get('completed'));
+    Todo.prototype.toggleState = function() {
+      this.$el.toggleClass('completed', this.model.get('completed'));
+      return this.$('input').attr('checked', this.model.get('completed'));
     };
 
     Todo.prototype.render = function() {
